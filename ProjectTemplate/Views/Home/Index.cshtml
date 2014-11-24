@@ -1,0 +1,30 @@
+﻿@using System.Web.Optimization
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html ng-app="crossroads">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <ul>
+        <li><a href="/home">home</a></li>
+        <li><a href="/login">login</a></li>
+        <li><a href="/profile">profile</a></li>
+    </ul>
+    <div ng-view>
+
+    </div>
+
+
+    @*<script src="~/scripts/angular.js"></script>
+    <script src="~/Scripts/angular-route.js"></script>*@
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-route.js"></script>
+    @Scripts.Render("~/bundles/angular")
+</body>
+</html>
