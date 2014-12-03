@@ -169,6 +169,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\API\LoginController.cs" />
     <Compile Include="Controllers\API\ProfileController.cs" />
     <Compile Include="Controllers\GatewayController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -180,19 +181,11 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\CustomAuthorize.cs" />
+    <Compile Include="Services\MinistryPlatform.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="xxxxApp\crossroads.net\controller\appController.js" />
-    <Content Include="xxxxApp\crossroads.net\module.js" />
-    <Content Include="xxxxApp\crossroads.net\templates\home.html" />
-    <Content Include="xxxxApp\crossroads.net\templates\login.html" />
-    <Content Include="xxxxApp\crossroads.net\templates\profile.html" />
-    <Content Include="xxxxApp\profile\controllers\profileController.js" />
-    <Content Include="xxxxApp\profile\directives\crdsProfileDirective.js" />
-    <Content Include="xxxxApp\profile\module.js" />
-    <Content Include="xxxxApp\profile\services\profile.js" />
-    <Content Include="xxxxApp\profile\templates\profile_personal.html" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -202,18 +195,21 @@
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-route.js" />
     <Content Include="Scripts\angular-route.min.js" />
+    <Content Include="Scripts\angular-ui-router.js" />
+    <Content Include="Scripts\angular-ui-router.min.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
-    <Content Include="Scripts\app\crossroads.net\controller\appController.js" />
-    <Content Include="Scripts\app\crossroads.net\module.js" />
-    <Content Include="Scripts\app\crossroads.net\templates\home.html" />
-    <Content Include="Scripts\app\crossroads.net\templates\login.html" />
-    <Content Include="Scripts\app\crossroads.net\templates\profile.html" />
-    <Content Include="Scripts\app\profile\controllers\profileController.js" />
-    <Content Include="Scripts\app\profile\directives\crdsProfileDirective.js" />
-    <Content Include="Scripts\app\profile\module.js" />
-    <Content Include="Scripts\app\profile\services\profile.js" />
-    <Content Include="Scripts\app\profile\templates\profile_personal.html" />
+    <Content Include="app\crossroads.net\controller\appController.js" />
+    <Content Include="app\crossroads.net\module.js" />
+    <Content Include="app\crossroads.net\templates\home.html" />
+    <Content Include="app\crossroads.net\templates\login-dialog.html" />
+    <Content Include="app\crossroads.net\templates\login.html" />
+    <Content Include="app\crossroads.net\templates\profile.html" />
+    <Content Include="app\profile\controllers\profileController.js" />
+    <Content Include="app\profile\directives\crdsProfileDirective.js" />
+    <Content Include="app\profile\module.js" />
+    <Content Include="app\profile\services\profile.js" />
+    <Content Include="app\profile\templates\profile_personal.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\angular.min.js.map" />
@@ -230,7 +226,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>

@@ -4,8 +4,11 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
+using System.Web;
 using System.Web.Http;
 using System.Web.Http.Description;
+using System.Web.Security;
+using System.Web.SessionState;
 
 namespace ProjectTemplate.Controllers
 {
@@ -50,11 +53,13 @@ namespace ProjectTemplate.Controllers
 
             var p = new Profile()
             {
-                Email = "tony.maddox@ingagepartners.com"
+                Email = "tony.maddox@ingagepartners.com" , FirstName = "Tony"
+                
             };
-            return this.Ok(d);
+            return this.Ok(p);
         }
 
+        
         //private async Task<Profile> GetProfile()
         //{
         //    var p = new Profile()

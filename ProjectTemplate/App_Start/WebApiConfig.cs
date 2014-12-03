@@ -15,6 +15,7 @@ namespace ProjectTemplate
             // Web API configuration and services
 
             config.Formatters.JsonFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("text/html"));
+
             //Use camel case for JSON data.
             config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
 

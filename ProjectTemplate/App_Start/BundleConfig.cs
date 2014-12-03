@@ -28,7 +28,7 @@ namespace ProjectTemplate
                       "~/Content/site.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/angular")
-              .IncludeDirectory("~/Scripts/app", "*.js", true));
+              .IncludeDirectory("~/app", "*.js", true));
         }
     }
 }
