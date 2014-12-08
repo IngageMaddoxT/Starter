@@ -1,14 +1,38 @@
 ﻿<div ng-controller="crdsProfileCtrl">
     <h1>Profile - Personal</h1>
 
-    <!--Name: {{customer.name}}<br />
-    Street: {{customer.street}}<br />
-    data: {{data}}-->
-    
+
     <table>
         <tr><td>Email: </td><td>{{person.email}}</td></tr>
         <tr><td>First Name: </td><td>{{person.firstName}}</td></tr>
         <tr><td>Last Name: </td><td>{{person.lastName}}</td></tr>
         <tr><td>Zip Code: </td><td>{{person.zipCode}}</td></tr>
     </table>
+
+    <form>  
+        <div>
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" ng-model="person.email">
+        </div>
+
+        <div>
+            <label for="firstName">First Name</label>
+            <input type="text" class="form-control" id="firstName" name="firstName" ng-model="person.firstName">
+        </div>
+
+        <div>
+            <label for="lastName">Last Name</label>
+            <input type="text" class="form-control" id="lastName" name="lastName" ng-model="person.lastName">
+        </div>
+
+        <div>
+            <label for="zipCode">Zip Code</label>
+            <input type="text" class="form-control" id="zipCode" name="zipCode" ng-model="person.zipCode">
+        </div>
+
+        <button id="save-personal" ng-click="saveProfile(person)" class="btn btn-primary" data-style="expand-left">
+            Save
+        </button>
+    </form>
+
 </div>

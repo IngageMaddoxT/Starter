@@ -15,6 +15,11 @@ namespace ProjectTemplate.Controllers.API
 
     public class ProfileController : ApiController
     {
+        //public IHttpActionResult Post([FromBody]Person person)
+        //{
+        //    return Created<Person>(Request.RequestUri, person);
+        //}
+
         [ResponseType(typeof (Person))]
         public IHttpActionResult Get(int id)
         {
@@ -39,6 +44,8 @@ namespace ProjectTemplate.Controllers.API
                 CrossroadsStartDate = null
             };
 
+
+            //return this.NotFound();
             return this.Ok(p);
 
             //Mapper.CreateMap<Models.Person, Models.DTO.Person>();
