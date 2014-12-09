@@ -3,7 +3,7 @@
     function ($scope, Profile) {
 
         $scope.saveProfile = function (data) {
-            Profile.saveContact(data);
+            Profile.save(data);
         };
 
         Profile.get().then(function (data) {

@@ -15,10 +15,10 @@ namespace ProjectTemplate.Controllers.API
 
     public class ProfileController : ApiController
     {
-        //public IHttpActionResult Post([FromBody]Person person)
-        //{
-        //    return Created<Person>(Request.RequestUri, person);
-        //}
+        public IHttpActionResult Post([FromBody]Person person)
+        {
+            return Created<Person>(Request.RequestUri, person);
+        }
 
         [ResponseType(typeof (Person))]
         public IHttpActionResult Get(int id)
